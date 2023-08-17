@@ -27,14 +27,6 @@ public class ShopManagerComponentTest {
 
     @Test
     public void getShopTest() throws ShopNotFoundException {
-        String name = "Shop1";
-        String countryCode = "CountryCode1";
-        Shop shop = shopManager.createShop(name, countryCode);
-
-        Shop persistedShop = shopManager.getShop(shop.getId());
-        assertNotNull(persistedShop);
-        assertEquals(shop.getId(), persistedShop.getId());
-        assertEquals(name, persistedShop.getName());
-        assertEquals(countryCode, persistedShop.getCountryCode());
+       // Write your code here
     }
 }
