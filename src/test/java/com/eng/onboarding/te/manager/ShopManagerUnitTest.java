@@ -29,4 +29,9 @@ public class ShopManagerUnitTest {
         shopManager.createShop("Shop1", "CountryCode1");
         verify(shopRepository).save(any(Shop.class));
     }
+
+    @Test
+    public void getShopTest() throws ShopNotFoundException {
+        // Write your code here
+    }
 }
