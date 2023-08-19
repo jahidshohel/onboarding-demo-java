@@ -18,7 +18,6 @@ public class ShopManagerIntegrationTest {
 
     @Test
     public void getCoordinateTest() throws URISyntaxException, IOException, InterruptedException, ShopNotFoundException {
-        //Coordinate coordinate = shopManager.getCoordinate(60009l);
         Coordinate coordinate = shopManager.getCoordinate(609L);
         assertNotNull(coordinate);
     }
