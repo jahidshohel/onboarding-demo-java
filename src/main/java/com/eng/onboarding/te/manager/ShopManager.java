@@ -19,8 +19,7 @@ public class ShopManager {
         }
 
         Shop shop = new Shop(name, countryCode);
-        shop = shopRepository.save(shop);
-        return shop;
+        return shopRepository.save(shop);
     }
 
     public Shop getShop(Long shopId) throws ShopNotFoundException {

@@ -13,7 +13,8 @@ public class ShopRepository {
     public Shop save(Shop shop) {
         Long newId = generateId();
         shop.setId(newId);
-        return inMemoryStorage.put(newId, shop);
+        inMemoryStorage.put(newId, shop);
+        return shop;
     }
 
     public Shop findById(Long id) {
@@ -21,7 +22,7 @@ public class ShopRepository {
     }
 
     private Long generateId() {
-        long id = new Random().nextLong();
+        long id = Math.abs(new Random().nextLong());
         while (inMemoryStorage.containsKey(id)) {
             id = new Random().nextLong();
         }
